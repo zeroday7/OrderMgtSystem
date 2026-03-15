@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/order_mgt
+    username: order_user
+    password: order_password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+  sql:
+    init:
+      mode: never
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.hibernate.SQL: debug
